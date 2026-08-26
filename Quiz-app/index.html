@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Master - Learn Practice Grow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="brand">
+                <div class="brand-icon">💡</div>
+
+                <div>
+                    <h1>Quiz<span>Master</span></h1>
+                    <p>Learn • Practice • Grow</p>
+                </div>
+            </div>
+
+
+            <div class="header-stats">
+
+                <div class="stat-card green">
+                    <div class="stat-icon">🏆</div>
+                    <div>
+                        <small>Score</small>
+                        <strong id="score">0</strong>
+                    </div>
+                </div>
+
+
+                <div class="stat-card yellow">
+                    <div class="stat-icon">🎯</div>
+                    <div>
+                        <small>Progress</small>
+                        <strong>
+                            <span id="progressNumber">1</span> / 10
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="stat-card purple">
+                    <div class="stat-icon">◷</div>
+                    <div>
+                        <small>Time</small>
+                        <strong id="timer">00:00</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN LAYOUT -->
+        <div class="content">
+
+            <!-- QUIZ SECTION -->
+            <main class="quiz-card">
+
+                <div class="quiz-top">
+
+                    <div class="question-badge">
+                        Question <span id="questionNumber">1</span> of 10
+                    </div>
+
+                    <div class="progress-area">
+
+                        <div class="progress-bar">
+                            <div id="progress"></div>
+                        </div>
+
+                        <span id="progressPercent">10%</span>
+
+                    </div>
+
+                    <button class="bookmark" id="bookmarkBtn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <!-- QUESTION -->
+                <section class="question-section">
+
+                    <div class="question-content">
+
+                        <h2 id="question">
+                            Which language is used to structure a web page?
+                        </h2>
+
+                        <div class="question-decoration">
+                            <div class="code-window">
+                                <div class="window-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="code-symbol">
+                                    &lt;/&gt;
+                                </div>
+                            </div>
+
+                            <div class="mini-plant">🌱</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+                    <div id="options" class="options"></div>
+
+
+                    <!-- FEEDBACK -->
+                    <div id="feedback" class="feedback"></div>
+
+                </section>
+
+
+                <!-- FOOTER -->
+                <div class="quiz-footer">
+
+                    <div class="hint">
+                        <span>💡</span>
+                        <p>Select the correct option and click Next to continue.</p>
+                    </div>
+
+                    <button
+                        id="nextBtn"
+                        class="next-btn"
+                        disabled>
+                        Next Question →
+                    </button>
+
+                </div>
+
+            </main>
+
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+
+                <!-- QUESTION NAVIGATOR -->
+                <div class="side-card">
+
+                    <h3>
+                        <span class="map-icon">♧</span>
+                        Question Navigator
+                    </h3>
+
+                    <div id="questionNavigator" class="navigator"></div>
+
+                </div>
+
+
+                <!-- LEGEND -->
+                <div class="side-card">
+
+                    <h3>Legend</h3>
+
+                    <div class="legend-item">
+                        <span class="legend-dot answered"></span>
+                        Answered
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-dot review"></span>
+                        Review
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-dot unanswered"></span>
+                        Not Answered
+                    </div>
+
+                </div>
+
+
+                <!-- TIPS -->
+                <div class="side-card tips-card">
+
+                    <h3>
+                        <span>☆</span>
+                        Tips
+                    </h3>
+
+                    <p>
+                        Read each question carefully before selecting your answer.
+                    </p>
+
+                    <div class="tip-arrow">➜</div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- MOTIVATION -->
+        <div class="motivation">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <div>
+                <h3>You've got this!</h3>
+                <p>Keep going and challenge yourself.</p>
+            </div>
+
+            <div class="sparkles">
+                ✦ ✧
+            </div>
+
+        </div>
+
+
+        <!-- RESULT -->
+        <section id="resultCard" class="result-card hidden">
+
+            <div class="result-trophy">
+                🏆
+            </div>
+
+            <p class="completed">QUIZ COMPLETED</p>
+
+            <h2>Great Job!</h2>
+
+            <p class="result-text">
+                You completed the QuizMaster challenge.
+            </p>
+
+            <div class="final-score">
+                <strong id="finalScore">0</strong>
+                <span>/ 10</span>
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <button id="restartBtn" class="restart-btn">
+                ↻ Restart Quiz
+            </button>
+
+        </section>
+
+
+        <footer>
+            QuizMaster © 2026 • Built with HTML, CSS & JavaScript
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
