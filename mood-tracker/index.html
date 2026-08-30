@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="mini-title">MY DAILY JOURNAL</p>
+
+                <h1>
+                    How are you feeling
+                    <span>today?</span>
+                </h1>
+
+                <p class="subtitle">
+                    Track your mood and keep a little record of your day.
+                </p>
+            </div>
+
+            <div class="date-box">
+                <span id="dayName">Today</span>
+                <strong id="currentDate"></strong>
+            </div>
+
+        </header>
+
+
+        <!-- MOOD SECTION -->
+        <section class="mood-section">
+
+            <h2>Choose your mood</h2>
+
+            <div class="moods">
+
+                <button class="mood" data-mood="Happy">
+                    <span>😊</span>
+                    <small>Happy</small>
+                </button>
+
+                <button class="mood" data-mood="Good">
+                    <span>🙂</span>
+                    <small>Good</small>
+                </button>
+
+                <button class="mood" data-mood="Sad">
+                    <span>😔</span>
+                    <small>Sad</small>
+                </button>
+
+                <button class="mood" data-mood="Angry">
+                    <span>😤</span>
+                    <small>Angry</small>
+                </button>
+
+            </div>
+
+
+            <div class="selected-mood">
+                Selected mood:
+                <strong id="selectedMood">None</strong>
+            </div>
+
+
+            <textarea
+                id="moodNote"
+                placeholder="Write something about your day..."
+            ></textarea>
+
+
+            <button id="saveMood" class="save-btn">
+                Save Today's Mood
+            </button>
+
+        </section>
+
+
+        <!-- MOOD OVERVIEW -->
+        <section class="stats-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="mini-title">YOUR PROGRESS</p>
+                    <h2>Mood Overview</h2>
+                </div>
+
+                <span id="totalEntries">0 Entries</span>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <span>😊</span>
+
+                    <div>
+                        <strong id="happyCount">0</strong>
+                        <small>Happy</small>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <span>🙂</span>
+
+                    <div>
+                        <strong id="goodCount">0</strong>
+                        <small>Good</small>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <span>😔</span>
+
+                    <div>
+                        <strong id="sadCount">0</strong>
+                        <small>Sad</small>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <span>😤</span>
+
+                    <div>
+                        <strong id="angryCount">0</strong>
+                        <small>Angry</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT ENTRIES -->
+        <section class="entries-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="mini-title">JOURNAL</p>
+                    <h2>Recent Entries</h2>
+                </div>
+
+            </div>
+
+
+            <div id="entriesList" class="entries-list">
+
+                <div class="empty">
+                    <span>🌷</span>
+
+                    <p>No mood entries yet.</p>
+
+                    <small>
+                        Start by adding today's mood.
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Daily Mood Tracker</p>
+        <small>Made with HTML, CSS & JavaScript</small>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
