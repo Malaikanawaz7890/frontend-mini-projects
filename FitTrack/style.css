@@ -1,0 +1,1115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #08090d;
+    color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --bg: #08090d;
+    --card: #11131a;
+    --card2: #171922;
+    --blue: #655cff;
+    --purple: #9b5cff;
+    --text: #f5f5f5;
+    --muted: #999dab;
+    --border: #242632;
+}
+
+
+/* LOADER */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background: #08090d;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-logo {
+    width: 75px;
+    height: 75px;
+    border: 2px solid #655cff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(101, 92, 255, 0.35);
+}
+
+.loader h3 {
+    margin-top: 18px;
+    font-size: 25px;
+}
+
+.loader p {
+    color: #777b8b;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 7px;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 9, 13, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #1d1f28;
+}
+
+.navbar {
+    max-width: 1200px;
+    height: 78px;
+    padding: 0 25px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #8178ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #b4b6c0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-btn {
+    background: #655cff;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 26px;
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 1200px;
+    min-height: 780px;
+    margin: auto;
+    padding: 140px 25px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: #8178ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(55px, 7vw, 85px);
+    line-height: 0.98;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    background: linear-gradient(90deg, #655cff, #b06cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+    color: #989ba8;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 21px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    border: none;
+}
+
+.primary-btn {
+    background: #655cff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #756cff;
+}
+
+.secondary-btn {
+    border: 1px solid #30323e;
+    color: white;
+    background: #11131a;
+}
+
+.secondary-btn:hover {
+    border-color: #655cff;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 25px;
+}
+
+.hero-stats span {
+    color: #747784;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+    width: 480px;
+    height: 520px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-circle {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(101, 92, 255, 0.35),
+        rgba(155, 92, 255, 0.08),
+        transparent 70%
+    );
+    position: absolute;
+}
+
+.fitness-card {
+    width: 290px;
+    height: 400px;
+    border: 1px solid #30323e;
+    background: linear-gradient(150deg, #171922, #0f1016);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.fitness-card:before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: #655cff;
+    opacity: 0.12;
+    top: 40px;
+}
+
+.person-shape {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    z-index: 2;
+}
+
+.head {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #c5c5cc, #777986);
+    margin: auto;
+}
+
+.body-shape {
+    width: 72px;
+    height: 125px;
+    background: linear-gradient(145deg, #7770ff, #4c45b9);
+    border-radius: 35px 35px 20px 20px;
+    margin: 5px auto 0;
+}
+
+.arm {
+    position: absolute;
+    width: 25px;
+    height: 110px;
+    background: #8d8e9a;
+    border-radius: 20px;
+    top: 65px;
+}
+
+.left-arm {
+    left: 12px;
+    transform: rotate(25deg);
+}
+
+.right-arm {
+    right: 12px;
+    transform: rotate(-25deg);
+}
+
+.leg {
+    position: absolute;
+    width: 29px;
+    height: 115px;
+    background: #777986;
+    border-radius: 20px;
+    top: 178px;
+}
+
+.left-leg {
+    left: 45px;
+    transform: rotate(5deg);
+}
+
+.right-leg {
+    right: 45px;
+    transform: rotate(-5deg);
+}
+
+.workout-label {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    background: rgba(8, 9, 13, 0.8);
+    border: 1px solid #292b37;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+.workout-label span {
+    font-size: 25px;
+}
+
+.workout-label div {
+    display: flex;
+    flex-direction: column;
+}
+
+.workout-label strong {
+    font-size: 12px;
+}
+
+.workout-label small {
+    color: #777b8b;
+    margin-top: 3px;
+}
+
+.floating-card {
+    position: absolute;
+    background: #151720;
+    border: 1px solid #30323e;
+    border-radius: 12px;
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 5;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.floating-card > span {
+    font-size: 25px;
+}
+
+.floating-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-card strong {
+    font-size: 14px;
+}
+
+.floating-card small {
+    color: #777b8b;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.card-one {
+    left: 0;
+    top: 90px;
+}
+
+.card-two {
+    right: 0;
+    bottom: 100px;
+}
+
+
+/* SECTION */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.section-title h2 span {
+    color: #8178ff;
+}
+
+.section-title > p:last-child {
+    color: #777b89;
+}
+
+
+/* GOALS */
+
+.goals {
+    padding: 100px 25px;
+    background: #0d0f14;
+}
+
+.goal-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.goal-card {
+    background: #11131a;
+    border: 1px solid #242632;
+    padding: 30px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    border-color: #655cff;
+    transform: translateY(-5px);
+}
+
+.goal-icon {
+    width: 50px;
+    height: 50px;
+    background: #1b1d29;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.goal-card h3 {
+    margin-bottom: 8px;
+}
+
+.goal-card p {
+    color: #777b89;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* WORKOUTS */
+
+.workout-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 110px 25px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #292b37;
+    background: transparent;
+    color: #9a9daa;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #655cff;
+    border-color: #655cff;
+    color: white;
+}
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.workout-card {
+    background: #11131a;
+    border: 1px solid #242632;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.workout-card:hover {
+    transform: translateY(-6px);
+    border-color: #393b49;
+}
+
+.workout-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.workout-image span {
+    font-size: 75px;
+}
+
+.workout-image small {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: rgba(0,0,0,0.45);
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.cardio-image {
+    background: linear-gradient(135deg, #352b65, #171c40);
+}
+
+.strength-image {
+    background: linear-gradient(135deg, #3d2a5c, #181527);
+}
+
+.abs-image {
+    background: linear-gradient(135deg, #303d66, #161b2c);
+}
+
+.stretch-image {
+    background: linear-gradient(135deg, #244d52, #142529);
+}
+
+.strength-two {
+    background: linear-gradient(135deg, #51335b, #21182c);
+}
+
+.cardio-two {
+    background: linear-gradient(135deg, #28476b, #151d2c);
+}
+
+.workout-info {
+    padding: 22px;
+}
+
+.workout-info > p {
+    color: #8178ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.workout-info h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.workout-details {
+    display: flex;
+    justify-content: space-between;
+    color: #777b89;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.start-btn {
+    width: 100%;
+    border: none;
+    background: #1d1f2a;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.start-btn:hover {
+    background: #655cff;
+}
+
+
+/* PLANNER */
+
+.planner-section {
+    background: #0d0f14;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.planner {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day-card {
+    background: #11131a;
+    border: 1px solid #252732;
+    padding: 18px 10px;
+    border-radius: 8px;
+}
+
+.day-card > span {
+    display: block;
+    color: #8178ff;
+    font-weight: 800;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.day-select {
+    width: 100%;
+    background: #08090d;
+    color: #aaaeba;
+    border: 1px solid #292b37;
+    padding: 8px 4px;
+    outline: none;
+    font-size: 10px;
+}
+
+.save-plan {
+    margin-top: 25px;
+    border: none;
+    background: #655cff;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.plan-message {
+    color: #7fce9d;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+
+/* BMI */
+
+.bmi-section {
+    padding: 100px 25px;
+}
+
+.bmi-box {
+    max-width: 1100px;
+    margin: auto;
+    background: linear-gradient(135deg, #151720, #11131a);
+    border: 1px solid #292b37;
+    border-radius: 18px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.bmi-content h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.bmi-content h2 span {
+    color: #8178ff;
+}
+
+.bmi-content > p:last-child {
+    color: #7d808d;
+    line-height: 1.8;
+}
+
+.bmi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #aeb0bb;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    background: #08090d;
+    border: 1px solid #292b37;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-group input:focus {
+    border-color: #655cff;
+}
+
+.bmi-result {
+    border: 1px solid #292b37;
+    background: #0d0f14;
+    padding: 15px;
+    text-align: center;
+    color: #858996;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+
+/* TIMER */
+
+.timer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.timer-overlay.show {
+    display: flex;
+}
+
+.timer-box {
+    width: 400px;
+    max-width: 100%;
+    background: #11131a;
+    border: 1px solid #30323e;
+    border-radius: 18px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.close-timer {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+}
+
+.timer-box h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 25px;
+}
+
+.timer-circle {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    border-radius: 50%;
+    border: 7px solid #655cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(101,92,255,0.2);
+}
+
+.timer-circle span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 35px;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.timer-buttons button {
+    border: 1px solid #30323e;
+    background: #191b24;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 5px;
+}
+
+.timer-buttons button:hover {
+    background: #655cff;
+}
+
+
+/* CONTACT */
+
+.contact-section {
+    background: #0d0f14;
+    padding: 100px 25px;
+}
+
+.contact-form {
+    max-width: 750px;
+    margin: auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: #11131a;
+    border: 1px solid #292b37;
+    color: white;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #655cff;
+}
+
+.contact-form .primary-btn {
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #07080b;
+    padding: 60px 25px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-content > div:first-child p {
+    color: #777b89;
+    font-size: 13px;
+    margin-top: 15px;
+    max-width: 300px;
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #888b98;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact {
+    color: #888b98;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    border-top: 1px solid #1d1f27;
+    padding-top: 20px;
+    text-align: center;
+    color: #5d606c;
+    font-size: 11px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: #0d0f14;
+        border-bottom: 1px solid #292b37;
+        display: none;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .goal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workout-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .planner {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bmi-box {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        height: 430px;
+    }
+
+    .fitness-card {
+        width: 250px;
+        height: 350px;
+    }
+
+    .glow-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .floating-card {
+        padding: 10px;
+    }
+
+    .card-one {
+        left: 0;
+        top: 50px;
+    }
+
+    .card-two {
+        right: 0;
+        bottom: 55px;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .goal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .planner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bmi-box {
+        padding: 30px 22px;
+    }
+
+    .bmi-content h2 {
+        font-size: 38px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .timer-box {
+        padding: 30px 20px;
+    }
+}

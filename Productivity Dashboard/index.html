@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskNest - Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span>✦</span> TaskNest
+            </div>
+
+            <nav>
+                <a href="#dashboard" class="active">🏠 Dashboard</a>
+                <a href="#tasks">✓ My Tasks</a>
+                <a href="#notes">📝 Notes</a>
+                <a href="#progress">📊 Progress</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Stay focused.</p>
+                <span>Small steps every day ✨</span>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <p class="welcome">Good evening 👋</p>
+                    <h1>Let's get things done.</h1>
+                </div>
+
+                <div class="date-box">
+                    <span>📅</span>
+                    <div>
+                        <strong id="currentDate">Today</strong>
+                        <small>TaskNest Dashboard</small>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">📋</div>
+                    <div>
+                        <span>Total Tasks</span>
+                        <h2 id="totalTasks">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon pink">✓</div>
+                    <div>
+                        <span>Completed</span>
+                        <h2 id="completedTasks">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">⏳</div>
+                    <div>
+                        <span>Pending</span>
+                        <h2 id="pendingTasks">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">🎯</div>
+                    <div>
+                        <span>Progress</span>
+                        <h2 id="progressPercent">0%</h2>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+
+                <!-- Tasks -->
+                <section class="panel tasks-panel" id="tasks">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="small-title">PRODUCTIVITY</span>
+                            <h2>My Tasks</h2>
+                        </div>
+
+                        <button class="add-btn" onclick="openTaskForm()">
+                            + Add Task
+                        </button>
+                    </div>
+
+                    <!-- Add Task Form -->
+                    <div class="task-form" id="taskForm">
+
+                        <input type="text" id="taskInput"
+                            placeholder="Enter a new task...">
+
+                        <select id="priorityInput">
+                            <option value="High">High Priority</option>
+                            <option value="Medium" selected>Medium Priority</option>
+                            <option value="Low">Low Priority</option>
+                        </select>
+
+                        <button onclick="addTask()">Add</button>
+
+                    </div>
+
+                    <!-- Search -->
+                    <div class="task-tools">
+
+                        <input type="text"
+                            id="searchInput"
+                            placeholder="🔍 Search tasks..."
+                            onkeyup="displayTasks()">
+
+                        <select id="filterInput" onchange="displayTasks()">
+                            <option value="all">All Tasks</option>
+                            <option value="pending">Pending</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                    </div>
+
+                    <div id="taskList" class="task-list"></div>
+
+                    <div class="empty-state" id="emptyState">
+                        <div>✨</div>
+                        <h3>No tasks found</h3>
+                        <p>Add a task and start being productive.</p>
+                    </div>
+
+                </section>
+
+                <!-- Right Side -->
+                <div class="right-column">
+
+                    <!-- Progress -->
+                    <section class="panel progress-panel" id="progress">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="small-title">YOUR GOAL</span>
+                                <h2>Daily Progress</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-circle">
+                            <div>
+                                <strong id="circlePercent">0%</strong>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-info">
+                            <span>Task completion</span>
+                            <strong id="progressText">0 / 0</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div id="progressBar"></div>
+                        </div>
+
+                    </section>
+
+                    <!-- Quick Note -->
+                    <section class="panel notes-panel" id="notes">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="small-title">QUICK NOTE</span>
+                                <h2>My Notes</h2>
+                            </div>
+
+                            <span class="note-icon">📝</span>
+                        </div>
+
+                        <textarea id="notesInput"
+                            placeholder="Write your thoughts, ideas or reminders..."></textarea>
+
+                        <button class="save-note" onclick="saveNote()">
+                            Save Note
+                        </button>
+
+                        <p id="noteMessage"></p>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+            <!-- Quote -->
+            <section class="quote-section">
+                <div class="quote-icon">“</div>
+
+                <div>
+                    <p>
+                        The secret of getting ahead is getting started.
+                    </p>
+                    <span>— Mark Twain</span>
+                </div>
+            </section>
+
+            <footer>
+                <p>© 2026 TaskNest. Built with HTML, CSS & JavaScript.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

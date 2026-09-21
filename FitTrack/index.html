@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitTrack | Fitness & Workout</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">FT</div>
+        <h3>FitTrack</h3>
+        <p>BUILD YOUR BEST SELF</p>
+    </div>
+
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Fit<span>Track</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workouts">Workouts</a></li>
+                <li><a href="#planner">Planner</a></li>
+                <li><a href="#bmi">BMI</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#workouts" class="nav-btn">Start Workout</a>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">FITNESS • HEALTH • STRENGTH</p>
+
+            <h1>
+                Build Your
+                <span>Stronger</span>
+                Self.
+            </h1>
+
+            <p class="hero-text">
+                Train smarter, stay consistent and reach your fitness
+                goals with simple workouts designed for your everyday routine.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#workouts" class="primary-btn">
+                    Explore Workouts →
+                </a>
+
+                <a href="#bmi" class="secondary-btn">
+                    Calculate BMI
+                </a>
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>20+</strong>
+                    <span>Exercises</span>
+                </div>
+
+                <div>
+                    <strong>4</strong>
+                    <span>Goals</span>
+                </div>
+
+                <div>
+                    <strong>30</strong>
+                    <span>Min Workouts</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="glow-circle"></div>
+
+            <div class="fitness-card">
+
+                <div class="person-shape">
+                    <div class="head"></div>
+                    <div class="body-shape"></div>
+                    <div class="arm left-arm"></div>
+                    <div class="arm right-arm"></div>
+                    <div class="leg left-leg"></div>
+                    <div class="leg right-leg"></div>
+                </div>
+
+                <div class="workout-label">
+                    <span>🔥</span>
+                    <div>
+                        <strong>Today's Goal</strong>
+                        <small>Stay Active</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="floating-card card-one">
+                <span>🔥</span>
+                <div>
+                    <strong>450</strong>
+                    <small>Calories</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-two">
+                <span>⏱</span>
+                <div>
+                    <strong>30 min</strong>
+                    <small>Workout</small>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Goal Section -->
+    <section class="goals">
+
+        <div class="section-title">
+            <p class="eyebrow">CHOOSE YOUR GOAL</p>
+            <h2>Train With A <span>Purpose.</span></h2>
+        </div>
+
+        <div class="goal-grid">
+
+            <div class="goal-card">
+                <div class="goal-icon">🔥</div>
+                <h3>Lose Weight</h3>
+                <p>Burn calories and improve your fitness.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">💪</div>
+                <h3>Build Muscle</h3>
+                <p>Strengthen your body with focused workouts.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">⚡</div>
+                <h3>Get Stronger</h3>
+                <p>Improve strength, power and endurance.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">❤️</div>
+                <h3>Stay Healthy</h3>
+                <p>Create an active and healthy lifestyle.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Workouts -->
+    <section class="workout-section" id="workouts">
+
+        <div class="section-title">
+
+            <p class="eyebrow">WORKOUT LIBRARY</p>
+
+            <h2>Find Your <span>Workout.</span></h2>
+
+            <p>
+                Choose a workout according to your fitness goal.
+            </p>
+
+        </div>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-category="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-category="cardio">
+                Cardio
+            </button>
+
+            <button class="filter-btn" data-category="strength">
+                Strength
+            </button>
+
+            <button class="filter-btn" data-category="abs">
+                Abs
+            </button>
+
+            <button class="filter-btn" data-category="stretch">
+                Stretch
+            </button>
+
+        </div>
+
+
+        <div class="workout-grid" id="workoutGrid">
+
+            <!-- Cardio -->
+            <div class="workout-card" data-category="cardio">
+
+                <div class="workout-image cardio-image">
+                    <span>🔥</span>
+                    <small>BEGINNER</small>
+                </div>
+
+                <div class="workout-info">
+
+                    <p>CARDIO</p>
+
+                    <h3>Full Body Burn</h3>
+
+                    <div class="workout-details">
+                        <span>⏱ 20 Min</span>
+                        <span>🔥 180 Cal</span>
+                    </div>
+
+                    <button
+                        class="start-btn"
+                        data-workout="Full Body Burn"
+                        data-duration="20">
+                        Start Workout
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Strength -->
+            <div class="workout-card" data-category="strength">
+
+                <div class="workout-image strength-image">
+                    <span>💪</span>
+                    <small>INTERMEDIATE</small>
+                </div>
+
+                <div class="workout-info">
+
+                    <p>STRENGTH</p>
+
+                    <h3>Upper Body Power</h3>
+
+                    <div class="workout-details">
+                        <span>⏱ 30 Min</span>
+                        <span>🔥 250 Cal</span>
+                    </div>
+
+                    <button
+                        class="start-btn"
+                        data-workout="Upper Body Power"
+                        data-duration="30">
+                        Start Workout
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Abs -->
+            <div class="workout-card" data-category="abs">
+
+                <div class="workout-image abs-image">
+                    <span>⚡</span>
+                    <small>BEGINNER</small>
+                </div>
+
+                <div class="workout-info">
+
+                    <p>ABS</p>
+
+                    <h3>Core Crusher</h3>
+
+                    <div class="workout-details">
+                        <span>⏱ 15 Min</span>
+                        <span>🔥 120 Cal</span>
+                    </div>
+
+                    <button
+                        class="start-btn"
+                        data-workout="Core Crusher"
+                        data-duration="15">
+                        Start Workout
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Stretch -->
+            <div class="workout-card" data-category="stretch">
+
+                <div class="workout-image stretch-image">
+                    <span>🧘</span>
+                    <small>BEGINNER</small>
+                </div>
+
+                <div class="workout-info">
+
+                    <p>STRETCH</p>
+
+                    <h3>Morning Stretch</h3>
+
+                    <div class="workout-details">
+                        <span>⏱ 10 Min</span>
+                        <span>🔥 60 Cal</span>
+                    </div>
+
+                    <button
+                        class="start-btn"
+                        data-workout="Morning Stretch"
+                        data-duration="10">
+                        Start Workout
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Strength -->
+            <div class="workout-card" data-category="strength">
+
+                <div class="workout-image strength-two">
+                    <span>🏋️</span>
+                    <small>ADVANCED</small>
+                </div>
+
+                <div class="workout-info">
+
+                    <p>STRENGTH</p>
+
+                    <h3>Leg Power</h3>
+
+                    <div class="workout-details">
+                        <span>⏱ 35 Min</span>
+                        <span>🔥 300 Cal</span>
+                    </div>
+
+                    <button
+                        class="start-btn"
+                        data-workout="Leg Power"
+                        data-duration="35">
+                        Start Workout
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cardio -->
+            <div class="workout-card" data-category="cardio">
+
+                <div class="workout-image cardio-two">
+                    <span>🏃</span>
+                    <small>INTERMEDIATE</small>
+                </div>
+
+                <div class="workout-info">
+
+                    <p>CARDIO</p>
+
+                    <h3>Quick HIIT</h3>
+
+                    <div class="workout-details">
+                        <span>⏱ 25 Min</span>
+                        <span>🔥 230 Cal</span>
+                    </div>
+
+                    <button
+                        class="start-btn"
+                        data-workout="Quick HIIT"
+                        data-duration="25">
+                        Start Workout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Planner -->
+    <section class="planner-section" id="planner">
+
+        <div class="section-title">
+
+            <p class="eyebrow">WEEKLY PLANNER</p>
+
+            <h2>Plan Your <span>Week.</span></h2>
+
+            <p>
+                Select a workout for each day and stay consistent.
+            </p>
+
+        </div>
+
+
+        <div class="planner">
+
+            <div class="day-card">
+                <span>MON</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+            <div class="day-card">
+                <span>TUE</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+            <div class="day-card">
+                <span>WED</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+            <div class="day-card">
+                <span>THU</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+            <div class="day-card">
+                <span>FRI</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+            <div class="day-card">
+                <span>SAT</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+            <div class="day-card">
+                <span>SUN</span>
+                <select class="day-select">
+                    <option value="">Rest Day</option>
+                    <option>Cardio</option>
+                    <option>Strength</option>
+                    <option>Abs</option>
+                    <option>Stretch</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button class="save-plan" id="savePlan">
+            Save My Plan
+        </button>
+
+        <p class="plan-message" id="planMessage"></p>
+
+    </section>
+
+
+    <!-- BMI -->
+    <section class="bmi-section" id="bmi">
+
+        <div class="bmi-box">
+
+            <div class="bmi-content">
+
+                <p class="eyebrow">HEALTH CHECK</p>
+
+                <h2>Calculate Your <span>BMI.</span></h2>
+
+                <p>
+                    Enter your height and weight to calculate
+                    your Body Mass Index.
+                </p>
+
+            </div>
+
+
+            <form id="bmiForm" class="bmi-form">
+
+                <div class="input-group">
+
+                    <label>Weight (kg)</label>
+
+                    <input
+                        type="number"
+                        id="weight"
+                        placeholder="e.g. 60"
+                        min="1"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Height (cm)</label>
+
+                    <input
+                        type="number"
+                        id="height"
+                        placeholder="e.g. 165"
+                        min="1"
+                        required>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Calculate BMI
+                </button>
+
+                <div class="bmi-result" id="bmiResult">
+                    Your BMI will appear here.
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Timer Modal -->
+    <div class="timer-overlay" id="timerOverlay">
+
+        <div class="timer-box">
+
+            <button class="close-timer" id="closeTimer">
+                ×
+            </button>
+
+            <p class="eyebrow">WORKOUT TIMER</p>
+
+            <h2 id="timerWorkout">
+                Workout
+            </h2>
+
+            <div class="timer-circle">
+
+                <span id="timerDisplay">
+                    00:00
+                </span>
+
+            </div>
+
+            <div class="timer-buttons">
+
+                <button id="pauseTimer">
+                    Pause
+                </button>
+
+                <button id="stopTimer">
+                    Stop
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+
+        <div class="section-title">
+
+            <p class="eyebrow">GET IN TOUCH</p>
+
+            <h2>Stay <span>Active.</span></h2>
+
+            <p>
+                Have a question? Send us a message.
+            </p>
+
+        </div>
+
+
+        <form class="contact-form" id="contactForm">
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required>
+
+            </div>
+
+            <textarea
+                placeholder="Your Message"
+                rows="5"
+                required></textarea>
+
+            <button class="primary-btn" type="submit">
+                Send Message →
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <a href="#home" class="logo">
+                    Fit<span>Track</span>
+                </a>
+
+                <p>
+                    Simple workouts. Better habits. Stronger you.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#workouts">Workouts</a>
+                <a href="#planner">Planner</a>
+                <a href="#bmi">BMI</a>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <p>📧 fittrack@example.com</p>
+                <p>📞 03176099065</p>
+                <p>📍 Pakistan</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 FitTrack. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
